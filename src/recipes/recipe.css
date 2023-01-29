@@ -1,0 +1,212 @@
+.recipe-add-section {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-section {
+  width: 75%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+.section-head {
+  width: 100%;
+  font-size: 4em;
+  color: var(--primary-grey);
+  text-align: start;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  display: flex;
+}
+
+.form-container {
+  width: 100%;
+  background-color: var(--primary-yellow);
+  box-shadow: var(--primary-dark-shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 99;
+  align-items: start;
+  padding-block: 1.75em;
+}
+.recipe-form {
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-left: 3em;
+  z-index: 99;
+}
+.form-input {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  justify-content: center;
+  justify-items: center;
+}
+.label-holder {
+  padding-top: 5px;
+}
+.input-field-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 5px;
+}
+.input-field-container small {
+  font-style: italic;
+  font-size: 0.75em;
+}
+input,
+textarea {
+  width: 100%;
+  background-color: var(--primary-white);
+  color: var(--primary-dark-blue);
+  box-shadow: var(--primary-shadow);
+  border-radius: 3px;
+  border: none;
+  padding: 0.75em 0em 0.75em 0.5em;
+  outline: none;
+}
+input:focus,
+textarea:focus,
+input:active,
+textarea:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(2px);
+}
+
+.ingredients-list-container {
+  width: 100%;
+  border: 2px solid var(--primary-white);
+  height: 15vh;
+  overflow-y: scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 190px));
+  gap: 0.5em 1.5em;
+}
+.submit-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.btn {
+  padding: 0.75em;
+  border: none;
+  border-radius: 3px;
+  box-shadow: var(--primary-shadow);
+  color: var(--primary-grey);
+}
+.btn:focus,
+.btn:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+.btn-submit {
+  width: 40%;
+  background-color: var(--primary-green);
+}
+.btn-add {
+  background-color: var(--primary-purple);
+}
+.ingredients-input {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  gap: 2em;
+}
+.ingredient {
+  transform: translateY(2px) translateX(2px);
+  background-color: var(--primary-grey);
+  width: 100%;
+  height: fit-content;
+  padding: 0.5em 0.5em;
+  display: flex;
+  gap: 0.75em;
+  border-radius: 3px;
+  /* box-shadow: var(--primary-shadow); */
+  justify-content: space-between;
+  align-items: center;
+}
+.ingredient button {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0em 0.5em;
+  color: var(--primary-dark-blue);
+}
+.ingredient button:hover {
+  transform: scale(1.25);
+  color: var(--primary-red);
+}
+.nav-btn-holder {
+  position: relative;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+/* CSS */
+.btn-navigate {
+  font-size: 0.35em;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: all 0.25s ease;
+}
+.btn-navigate:hover {
+  background-color: var(--primary-grey);
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px, 6px 6px 0px 0px, 7px 7px 0px 0px, 8px 8px 0px 0px;
+  transform: translateX(-2px);
+}
+.btn-navigate:active {
+  box-shadow: 0px 0px 0px 0px;
+  transform: translateY(3px) translateX(2px);
+}
+
+@media (min-width: 768px) {
+  .btn-navigate {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.burger {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 50vh;
+  object-fit: contain;
+  z-index: 1;
+  animation: updown 7s ease infinite;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap");
+
+:root {
+  --primary-orange: #ff5400;
+  --primary-yellow: #ffbd00;
+  --secondary-orange: #ff6f00;
+  --primary-golden: #cca711;
+  --primary-dark-blue: #1e1e1e;
+  --primary-grey: #d9d9d9;
+  --primary-grey-dark: #838383;
+  --primary-green: #008f3b;
+  --primary-purple: #4940fd;
+  --primary-white: #fff;
+  --primary-red:#d84444;
+
+  --primary-font: "K2D", sans-serif;
+
+  --primary-shadow: 4px 4px 0px 0px var(--primary-dark-blue);
+  --primary-dark-shadow: 10px 10px 0px 0px var(--primary-dark-blue);
+  --primary-button-shadow: -1px 1px 0px 0px var(--primary-dark-blue),
+    -2px 2px 0px 0px var(--primary-dark-blue),
+    -3px 3px 0px 0px var(--primary-dark-blue),
+    -4px 4px 0px 0px var(--primary-dark-blue),
+    -5px 5px 0px 0px var(--primary-dark-blue);
+
+  --primary-spacer: 1rem;
+}
+* {
+  font-family: var(--primary-font);
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  width: 0.5vw;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary-grey);
+  border-radius: 20px;
+}
+*::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0);
+}
+body {
+  margin: 0;
+  width: 100vw;
+  max-width: 100%;
+  height: fit-content;
+  position: relative;
+  background-color: var(--primary-orange);
+}
+
+.flex-col {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.logo {
+  background-color: var(--primary-yellow);
+  color: var(--primary-dark-blue);
+  height: inherit;
+  width: fit-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 2em;
+  padding: 0.6rem;
+  border-right: 1px solid var(--primary-dark-blue);
+}
+.logo a {
+  color: var(--primary-dark-blue);
+  text-decoration: none;
+}
