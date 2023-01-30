@@ -62,13 +62,15 @@ body {
 .logo {
   background-color: var(--primary-yellow);
   color: var(--primary-dark-blue);
-  height: inherit;
+  height: 100%;
   width: fit-content;
   position: absolute;
   left: 0;
   top: 0;
   font-size: 2em;
-  padding: 0.6rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   border-right: 1px solid var(--primary-dark-blue);
 }
 .logo a {

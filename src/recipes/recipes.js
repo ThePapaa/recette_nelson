@@ -1,19 +1,24 @@
 import React, { useState, useEffect, useRef } from 'react'
 import './recipe.css'
+import { Link } from 'react-router-dom'
 import { db } from '../firebase'
+import { Diets } from './diets'
+import DietCards from '../components/dietCards'
 import { collection, addDoc } from 'firebase/firestore'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Recipes = () => {
+    const [visibility, setVisible] = useState(false)
 
     const [newIngredient, setNewIngredient] = useState([])
     const [ingredientsList, updateIngredientsList] = useState([])
-
+    const [preference, setPreference] = useState([])
     const [name, setName] = useState([])
     const [title, setTitle] = useState('')
     const [procedure, setProcedure] = useState('')
     var data = useRef({})
+
 
     const collectData = () => {
         data.name = name
@@ -22,6 +27,16 @@ const Recipes = () => {
         data.procedure = procedure
         data.timeStamp = new Date().toLocaleString()
     }
+
+    const inPrefs = (pref) => {
+        if (preference.indexOf(pref) === -1) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+
     const clearForm = () => {
         setName([])
         setTitle('')
@@ -82,7 +97,7 @@ const Recipes = () => {
                 <div className="section-head">
                     <h1>ADD RECIPE</h1>
                     <div className="nav-btn-holder">
-                        <button className="btn-navigate">view all recipes</button>
+                        <Link to='/all-recipes'> <button className="btn-navigate">view all recipes</button></Link>
                     </div>
                 </div>
                 <div className="form-container">
@@ -128,6 +143,26 @@ const Recipes = () => {
                             </div>
                             <div className="input-field-container">
                                 <textarea rows='7' value={procedure} onChange={(e) => { setProcedure(e.target.value) }} ></textarea>
+                            </div>
+                        </div>
+                        <div className="optional-container">
+                            <div className="optional-toggle">
+                                <h4>OPTIONALS</h4>
+                                <button className="toggle-btn" type='button' onClick={() => { setVisible(!visibility) }}>
+                                    <i className="fa-solid fa-angles-down"></i>
+                                </button>
+                            </div>
+                            <div className={visibility ? "optionals" : "invisible"}>
+                                <div className="form-input">
+                                    <div className="label-holder">
+                                        <label htmlFor="">Preferences:</label>
+                                    </div>
+                                    <div className="diets-container">
+                                        {Diets.map((item, index) => {
+                                            return <DietCards id={index} cardMode={ "diet-card-normal" } buttonMode={"button-normal"} image={item.image} name={item.name} method={() => { setPreference([...preference, item.name]) }} />
+                                        })}
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div className="submit-btn-container">
