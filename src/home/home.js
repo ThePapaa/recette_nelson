@@ -30,7 +30,7 @@ function Home() {
         <section className='home'>
             <div className="main-body">
                 <ToastContainer />
-
+                
                 <section className="hero-section">
                     <div className="hero-text-container">
                         <h1>RECETTE</h1>
