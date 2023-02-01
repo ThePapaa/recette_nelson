@@ -26,50 +26,10 @@ function Home() {
     // notify()
   }, []);
 
-<<<<<<< main
   return (
-    <section className="home">
+    <section className='home'>
       <div className="main-body">
         <ToastContainer />
-=======
-    useEffect(() => {
-        // notify()
-    }, [])
-
-    return (
-        <section className='home'>
-            <div className="main-body">
-                <ToastContainer />
-                
-                <section className="hero-section">
-                    <div className="hero-text-container">
-                        <h1>RECETTE</h1>
-                        <img src="images/EGGS.png" alt="" />
-                    </div>
-                    <div className="hero-grid">
-                        <div className="grid-text browse">
-                            <h3>BROWSE</h3>
-                        </div>
-                        <div className="grid-text generate">
-                            <h3>GENERATE</h3>
-                        </div>
-                        <div className="grid-btn">
-                            <Link to="recipes" style={{ width: '75%' }}><button className="btn-hero">GET STARTED <i className="fa-solid fa-angles-right blue"></i></button></Link>
-                        </div>
-                        <div className="grid-summary">
-                            <h2>250+</h2>
-                            <p>Recipes</p>
-                        </div>
-                    </div>
-                    <div className="scrolldown">
-                        <div className="chevrons">
-                            <div className="chevrondown"></div>
-                            <div className="chevrondown"></div>
-                        </div>
-                    </div>
-
-                </section>
->>>>>>> main
 
         <section className="hero-section">
           <div className="hero-text-container">

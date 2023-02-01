@@ -3,7 +3,7 @@ const SideNav = (props) => {
   return (
     <div
       className="sidenav"
-      style={props.toggle ? { top: "0%" } : { top: "-100%" }}
+      style={props.toggle ? { left: "0%" } : { left: "100%" }}
     >
       <div className="links-list">
         {props.links.map((item, index) => {

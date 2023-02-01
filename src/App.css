@@ -15,7 +15,7 @@
   --primary-red: #d84444;
 
   --primary-font: "K2D", sans-serif;
-  --secondary-font:"Bebas Neue", cursive;
+  --secondary-font: "Bebas Neue", cursive;
 
   --primary-shadow: 4px 4px 0px 0px var(--primary-dark-blue);
   --primary-dark-shadow: 10px 10px 0px 0px var(--primary-dark-blue);
@@ -91,5 +91,8 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
+  }
+  p {
+    font-size: 0.75em;
   }
 }

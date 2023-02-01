@@ -254,3 +254,28 @@ textarea:active {
   background-color: var(--primary-dark-blue);
   color: var(--primary-grey);
 }
+
+@media only screen and (max-width: 768px) {
+  .main-section {
+    width: 90%;
+    margin-bottom: 2em;
+  }
+  .section-head {
+    font-size: 2em !important;
+  }
+  .nav-btn-holder {
+    display: none;
+  }
+  label {
+    font-size: 0.75em;
+  }
+  .recipe-form {
+    padding-left: 0.75em;
+    gap: 0;
+  }
+  .form-input {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
