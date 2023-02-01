@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 .diet-card {
   width: 100%;
   display: flex;
@@ -15,7 +14,7 @@
 .diet-card h3 {
   font-size: 1em;
   font-weight: lighter;
-  font-family: "Bebas Neue", cursive;
+  font-family: var(--secondary-font);
 }
 .diet-card-normal {
   background-color: var(--primary-grey) !important;
@@ -64,6 +63,50 @@
   justify-content: space-between;
 }
 
-.invisible{
+.invisible {
   display: none !important;
+}
+.sidenav {
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: var(--primary-orange);
+  color: var(--primary-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.links-list {
+  width: 100%;
+  height: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+}
+.links-list a {
+  text-decoration: none;
+  display: flex;
+  height:100%;
+  width: 100%;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5em;
+  color: var(--primary-dark-blue);
+  text-transform: uppercase;
+  font-family: var(--secondary-font);
+  transition: all 1s ease;
+}
+.links-list a:hover,
+.links-list a:focus,
+.links-list a:active {
+  background-color: var(--secondary-orange);
+  color: var(--primary-grey);
 }
