@@ -1,9 +1,9 @@
 export const NavLinks = [
-  //   {
-  //     name: "HOME",
-  //     to: "/",
-  //     tag: "HOME",
-  //   },
+  {
+    name: "HOME",
+    url: "/",
+    tag: "HOME",
+  },
   {
     name: "POST RECIPE",
     url: "/recipes",
@@ -18,9 +18,10 @@ export const NavLinks = [
     name: "TEST SITE",
     url: "\tests",
     tag: "Welcome to the test site",
-  },{
-    name:"HELP",
-    url:"",
-    tag:"Get help"
-  }
+  },
+  {
+    name: "HELP",
+    url: "",
+    tag: "Get help",
+  },
 ];

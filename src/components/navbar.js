@@ -1,11 +1,7 @@
-import { Link, NavLink } from "react-router-dom";
-import { NavLinks } from "./navlinks";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const [openSideNav, setOpenSideNav] = useState(false);
 
-  let linkHeight = 100 / NavLinks.length;
+const Navbar = (props) => {
   return (
     <nav className="home-nav-bar">
       <div className="logo">
@@ -32,25 +28,14 @@ const Navbar = () => {
       <div className="menu-bar">
         <button
           className="menu-btn"
-          onClick={() => {
-            setOpenSideNav(!openSideNav);
-          }}
+          onClick={props.clickFunction}
         >
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
-      <div className="sidenav">
-        <div className="links-list">
-          {NavLinks.map((item, index) => {
-            return (
-              <Link to={item.url}>
-                {item.name}
-              </Link>
-            );
-          })}
-        </div>
-      </div>
+     
     </nav>
+    
   );
 };
 

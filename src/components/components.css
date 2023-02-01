@@ -66,20 +66,7 @@
 .invisible {
   display: none !important;
 }
-.sidenav {
-  width: 100%;
-  height: 100vh;
-  z-index: 9999;
-  position: fixed;
-  left: 0;
-  top: 0;
-  background-color: var(--primary-orange);
-  color: var(--primary-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .links-list {
   width: 100%;
   height: 50%;
@@ -92,7 +79,7 @@
 .links-list a {
   text-decoration: none;
   display: flex;
-  height:100%;
+  height: 100%;
   width: 100%;
   flex-direction: column;
   justify-items: center;
@@ -109,4 +96,102 @@
 .links-list a:active {
   background-color: var(--secondary-orange);
   color: var(--primary-grey);
+}
+
+.menu-bar {
+  display: none;
+}
+.sidenav {
+  display: none;
+}
+.menu-btn {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: var(--primary-dark-blue);
+}
+
+.pick-of-week {
+  width: 75%;
+  height: 50vh;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--primary-grey);
+}
+.right-card {
+  width: 100%;
+  height: 100%;
+}
+.right-card img {
+  width: 100%;
+  object-fit: cover;
+  height: 50vh;
+}
+.left-card {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+.card-head {
+  align-items: start;
+  justify-content: center;
+  width: 75%;
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+}
+.card-head::after {
+  content: "";
+  width: 75%;
+  background-color: var(--primary-dark-blue);
+  border-radius: 1px solid var(--primary-dark-blue);
+}
+.recipe-contents {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+}
+.recipe-title {
+  font-size: 1.75em;
+}
+.recipe-desc {
+  width: 75%;
+  text-align: left;
+}
+.btn-recipe {
+  width: 50%;
+  color: var(--primary-dark-blue);
+  background-color: var(--primary-white);
+  border: none;
+}
+@media only screen and (max-width: 768px) {
+  .sidenav {
+    width: 100%;
+    height: 100vh;
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    background-color: var(--primary-orange);
+    color: var(--primary-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+    /* border-bottom: 2px solid var(--primary-dark-blue); */
+  }
+  .menu-bar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark-blue);
+    font-size: 2em;
+  }
 }
