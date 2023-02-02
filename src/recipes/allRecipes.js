@@ -1,5 +1,6 @@
 import React from 'react'
 import "./allrecipes.css"
+import { RecipeCards } from '../components/cards'
 // import { db } from '../firebase'
 // import { Link } from 'react-router-dom'
 
@@ -17,6 +18,11 @@ const AllRecipes = () => {
           </div>
           <div className="filter-container">
             <button className="btn btn-add">FILTER <i className="fa-solid fa-filter"></i></button>
+          </div>
+        </div>
+        <div className="all-recipes-container">
+          <div className="recipe-cards-container">
+            <RecipeCards />
           </div>
         </div>
       </div>

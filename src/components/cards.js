@@ -48,11 +48,29 @@ export const DisplayCard = () => {
     );
 };
 
+
 export const RecipeCards = (props) => {
+
     return (
         <div className="recipe-card">
-            
+            <div className="contents-wrapper">
+                <div className="card-title">
+                    <h2>RICE BEEF</h2>
+                </div>
+                <div className="card-preferences">
+                    <img src='https://cdn-icons-png.flaticon.com/512/4491/4491013.png' alt="" className="preference-img" />
+                </div>
+                <div className="card-contents">
+                    <div className="card-rating">
+                        <p>by Ronald</p>
+                    </div>
+                    <div className="card-btn">
+                        <button >view recipe</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
     )
 
 }
