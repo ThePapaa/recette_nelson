@@ -16,7 +16,7 @@ export const NavLinks = [
   },
   {
     name: "TEST SITE",
-    url: "\tests",
+    url: "/tests",
     tag: "Welcome to the test site",
   },
   {

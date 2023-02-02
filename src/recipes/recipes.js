@@ -3,7 +3,7 @@ import "./recipe.css";
 import { Link } from "react-router-dom";
 import { db } from "../firebase";
 import { Diets } from "./diets";
-import DietCards from "../components/dietCards";
+import { DietCards } from "../components/cards";
 import { collection, addDoc } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -27,13 +27,13 @@ const Recipes = () => {
     data.timeStamp = new Date().toLocaleString();
   };
 
-  const inPrefs = (pref) => {
-    if (preference.indexOf(pref) === -1) {
-      return true;
-    } else {
-      return false;
-    }
-  };
+  // const inPrefs = (pref) => {
+  //   if (preference.indexOf(pref) === -1) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // };
 
   const clearForm = () => {
     setName([]);

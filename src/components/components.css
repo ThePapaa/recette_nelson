@@ -129,7 +129,7 @@
   width: 100%;
   object-fit: cover;
   height: 50vh;
-  border-radius: 5px 5px 0px 0px;
+  border-radius: 0px 5px 5px 0px;
 }
 .left-card {
   height: 100%;
@@ -147,7 +147,7 @@
 }
 .card-head::after {
   content: "";
-  margin-top: 1em;
+  margin-top: 0.5em;
   position: relative;
   width: 75%;
   height: 2px;
@@ -187,7 +187,7 @@
     justify-content: center;
     align-items: center;
     transition: all 1s ease;
-    /* border-bottom: 2px solid var(--primary-dark-blue); */
+    border-left: 1px solid var(--primary-dark-blue);
   }
   .menu-bar {
     display: block;
@@ -198,6 +198,7 @@
     justify-content: center;
     color: var(--primary-dark-blue);
     font-size: 2em;
+    background-color: var(--primary-orange);
   }
   .pick-of-week {
     width: 90%;
@@ -209,6 +210,7 @@
   }
   .right-card img {
     height: 20vh;
+    border-radius: 5px 5px 0px 0px;
   }
   .left-card {
     grid-row: 2;
@@ -235,5 +237,6 @@
   .btn-recipe {
     padding: 0.5em 0.5em;
     width: 75%;
+    color: var(--primary-dark-blue);
   }
 }
