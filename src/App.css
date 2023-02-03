@@ -55,7 +55,12 @@ body {
   position: relative;
   background-color: var(--primary-orange);
 }
-
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .flex-col {
   display: inline-flex;
   flex-direction: column;

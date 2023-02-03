@@ -104,7 +104,6 @@ textarea:active {
   border: none;
   border-radius: 3px;
   box-shadow: var(--primary-shadow);
-  color: var(--primary-grey);
 }
 .btn:focus,
 .btn:active {

@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect } from "react";
 // import { db } from '../firebase'
 // import { query, collection, onSnapshot, addDoc } from 'firebase/firestore'
 import { Link } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { DisplayCard } from "../components/displayCard";
+import { DisplayCard } from "../components/cards";
 import "./home.css";
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
   }
 
   useEffect(() => {
-    // notify()
+    notify()
   }, []);
 
   return (
