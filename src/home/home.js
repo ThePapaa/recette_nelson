@@ -22,9 +22,6 @@ function Home() {
     return;
   }
 
-  useEffect(() => {
-    notify()
-  }, []);
 
   return (
     <section className='home'>

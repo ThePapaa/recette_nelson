@@ -20,35 +20,34 @@
   grid-template-columns: 4fr 1fr;
 }
 .search-bar {
+  position: relative;
   width: 70%;
   display: flex;
   flex-direction: row;
   justify-content: start;
 }
 .search-bar input {
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px 0px 0px 5px;
+  width: 100%;
 }
 .search-bar i {
+  position: absolute;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 2.5em;
   position: relative;
-  background-color: var(--primary-white);
-  left: 2%;
+  background-color: var(--primary-grey);
   color: var(--primary-dark-blue);
-  border-radius: 5px 0px 0px 5px;
-  box-shadow: 0px 4px 0px 0px;
+  border-radius: 0px 5px 5px 0px;
+  transition: transform 0.5s ease;
+  height: 100%;
 }
 
 .search-bar input {
   height: fit-content;
   transform: none;
-}
-.search-bar i:hover,
-.search-bar i:active {
-  background-color: var(--primary-grey);
 }
 .filter-container {
   width: 100%;
@@ -67,16 +66,7 @@
   }
   .search-bar {
     width: 100%;
-    gap: 1em;
     align-items: center;
-  }
-  .search-bar i {
-    border-radius: 50%;
-    height: 30px;
-    box-shadow: 3px 2px 0px 0px;
-  }
-  .search-bar input {
-    border-radius: 5px;
   }
   .recipes-body-section {
     width: 100%;

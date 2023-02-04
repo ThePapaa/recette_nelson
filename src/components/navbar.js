@@ -26,7 +26,7 @@ export const Navbar = (props) => {
       </div>
       <ul className="flex-row">
         <li>
-          <Link to="#">
+          <Link to="/all-recipes">
             <i className="fa-solid fa-magnifying-glass"></i> FIND RECIPES
           </Link>
         </li>
